@@ -13,6 +13,15 @@ public class TargetLife : MonoBehaviour
     [SerializeField] GameManager _gameManager;
 
     [SerializeField] Slider _lifeBarSlider;
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<Projectile>())
+        {
+            TakeDamage();
+            Destroy(collision.gameObject);
+        }
+    }
     void Start()
     {
         currentHP = _maxHP;

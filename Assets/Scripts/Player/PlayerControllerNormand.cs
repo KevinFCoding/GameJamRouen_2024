@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControllerNormand : MonoBehaviour
 {
     [SerializeField] Player player;
-    public float _angle;
+    private float _angle;
 
     private void Start()
     {
@@ -17,7 +17,6 @@ public class PlayerControllerNormand : MonoBehaviour
         {
             player.Fire();
         }
-
 
         float x = player.gm.transform.position.x+ Mathf.Cos(_angle) * player.getRadius();
         float y = player.gm.transform.position.y;
