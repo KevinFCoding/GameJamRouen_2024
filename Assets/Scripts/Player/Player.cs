@@ -8,15 +8,11 @@ public class Player : MonoBehaviour
     [SerializeField] GameManager _gm;
     [SerializeField] bool _isNormand;
 
+    [SerializeField] Projectile _projectile;
+
     private bool _isAttacking;
+    private float shootTimer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         transform.LookAt(_target);
@@ -24,6 +20,7 @@ public class Player : MonoBehaviour
         {
             changePlayerAttacking();
         }
+        shootTimer += Time.deltaTime;
     }
 
     private void changePlayerAttacking()
@@ -53,6 +50,11 @@ public class Player : MonoBehaviour
 
     public void Fire()
     {
-
+        if(shootTimer > 2) { 
+            Debug.Log("asdkojasjkhdashjkdhjkasdjkhasdjkhas");
+            Projectile shotFired = Instantiate(_projectile, transform, true);
+            Destroy(shotFired, 5f);
+            shootTimer = 0;
+        }
     }
 }

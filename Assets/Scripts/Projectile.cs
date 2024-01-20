@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] float _speed;
+    public GameObject projectile;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.position += Time.deltaTime * _speed * transform.forward;
     }
 }

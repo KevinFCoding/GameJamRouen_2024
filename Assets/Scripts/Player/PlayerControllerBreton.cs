@@ -10,15 +10,12 @@ public class PlayerControllerBreton : MonoBehaviour
 
     public float _distanceRadius;
     public float _angle;
-
     public bool isAttacking;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        player = gameObject.GetComponent<Player>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -32,7 +29,6 @@ public class PlayerControllerBreton : MonoBehaviour
             float x = _target.position.x + Mathf.Cos(_angle) * _distanceRadius;
         float y = _target.position.y;
         float z = _target.position.z + Mathf.Sin(_angle) * _distanceRadius;
-
 
         transform.position = new Vector3(x, y, z);
 

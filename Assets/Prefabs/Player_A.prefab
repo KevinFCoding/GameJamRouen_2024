@@ -123,6 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
+  _gm: {fileID: 0}
+  _isNormand: 0
+  _projectile: {fileID: 5027431261187058804, guid: 94406d8ab11382e46b18780ca2f83e86, type: 3}
 --- !u!114 &2519059763063846490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,8 +140,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
   _speed: 4
+  player: {fileID: 0}
   _distanceRadius: 10
   _angle: 0
+  isAttacking: 0
 --- !u!65 &9144850491828855580
 BoxCollider:
   m_ObjectHideFlags: 0

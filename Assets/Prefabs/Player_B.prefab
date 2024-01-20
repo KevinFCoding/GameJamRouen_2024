@@ -154,6 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
+  _gm: {fileID: 0}
+  _isNormand: 0
+  _projectile: {fileID: 5027431261187058804, guid: 94406d8ab11382e46b18780ca2f83e86, type: 3}
 --- !u!114 &6560078292701148157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
   _speed: 8
+  player: {fileID: 0}
   _distanceRadius: 15
   _angle: 0
 --- !u!65 &6898492283865720102

@@ -11,13 +11,10 @@ public class PlayerControllerNormand : MonoBehaviour
     public float _distanceRadius;
     public float _angle;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        player = gameObject.GetComponent<Player>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.W) && player.isPlayerAttacking())
