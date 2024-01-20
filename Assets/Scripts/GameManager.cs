@@ -56,16 +56,14 @@ public class GameManager : MonoBehaviour
 
     }
 
-<<<<<<< Updated upstream
     public bool getStatusAttack()
     {
         return _statusAttack;
-=======
+    }
     public void GameOver()
     {
         gameIsFinished = true;
         Time.timeScale = 0;
         _gameOver.ShowScoreBoard();
->>>>>>> Stashed changes
     }
 }

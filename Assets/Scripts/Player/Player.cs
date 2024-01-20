@@ -29,25 +29,29 @@ public class Player : MonoBehaviour
 
     private void changePlayerAttacking()
     {
+        // Normand Attack
         if(_isNormand && gm.getStatusAttack())
         {
             _distanceRadius = 15;
             _isAttacking = false; 
         };
-        if (!_isNormand && !gm.getStatusAttack())
+        // Normand Defend
+        if (_isNormand && !gm.getStatusAttack())
         {
             _distanceRadius = 8;
-            _isAttacking = false;
+            _isAttacking = true;
         };
-        if (!_isNormand && gm.getStatusAttack())
+        // Breton Attack
+        if (!_isNormand && !gm.getStatusAttack())
         {
             _distanceRadius = 15;
             _isAttacking = true;
         };
+        // Breton Defend
         if (!_isNormand && !gm.getStatusAttack())
         {
             _distanceRadius = 8;
-            _isAttacking = true;
+            _isAttacking = false;
         };
     } 
 

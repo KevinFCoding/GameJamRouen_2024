@@ -180,6 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 257007655}
   - component: {fileID: 257007654}
+  - component: {fileID: 257007656}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -201,8 +202,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _river: {fileID: 452022200}
   _timer: {fileID: 50866855}
+  _target: {fileID: 0}
+  _gameOver: {fileID: 257007656}
   _roundSeconds: 20
   _statusAttack: 0
+  gameIsFinished: 0
 --- !u!4 &257007655
 Transform:
   m_ObjectHideFlags: 0
@@ -218,6 +222,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257007656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257007653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c318bc0cdac6e6a4e83f6494015ad1ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverCanvas: {fileID: 0}
 --- !u!1 &452022199
 GameObject:
   m_ObjectHideFlags: 0
