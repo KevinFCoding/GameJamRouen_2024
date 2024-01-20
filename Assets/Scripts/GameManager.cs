@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] River _river;
     [SerializeField] TimerManager _timer;
     [SerializeField] int _roundSeconds;
+    [SerializeField] bool _statusAttack;
 
     void Start()
     {
@@ -17,15 +18,26 @@ public class GameManager : MonoBehaviour
     {
         if (_timer.isFinishTimer)
         {
-           //SwitchAttack();
-            print("SWITCH");
+            SwitchAttack();
             _timer.isFinishTimer = false;
+
 
         }
     }
 
     public void SwitchAttack()
     {
+        if (_statusAttack == true)
+        {
+            _statusAttack = false;
+            _river._currentState = _statusAttack;
+
+        }
+        else
+        {
+            _statusAttack = true;
+            _river._currentState = _statusAttack;
+        }
         _river.ChangeState();
     }
 
