@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 776861808111452965}
   - component: {fileID: 7884837016281494947}
   - component: {fileID: 5027431261187058804}
-  - component: {fileID: 1611402821312696154}
+  - component: {fileID: 7217623370627570360}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -154,8 +154,7 @@ MonoBehaviour:
   _speed: 10
   _projectileStyle: Knight
   projectile: {fileID: 0}
-  arrowDirection: 1
---- !u!54 &1611402821312696154
+--- !u!54 &7217623370627570360
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,7 +177,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

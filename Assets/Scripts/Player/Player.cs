@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] Transform _target;
     [SerializeField] bool _isNormand;
     [SerializeField] List<Projectile> _projectile;
+    [SerializeField] List<GameObject> _MiniatureImage;
+
     [SerializeField] float _speed;
     [SerializeField] float _distanceRadius;
 
@@ -25,6 +29,7 @@ public class Player : MonoBehaviour
         transform.position = _target.transform.position;
         changePlayerAttacking();
         _arrowMuzzle = gameObject.GetComponentInChildren<ArrowMuzzle>().transform;
+        nextTroupes();
     }
 
     void Update()
@@ -36,6 +41,7 @@ public class Player : MonoBehaviour
 
     private void changePlayerAttacking()
     {
+
         // Normand Defend
         if(_isNormand && !gm.getStatusAttack()) // If false the Normand have montsaitnniche,
         {
@@ -73,10 +79,9 @@ public class Player : MonoBehaviour
 
     public void Fire()
     {
-        Debug.Log(getCurrentProjectileSelected());
         if(shootTimer > 2) { 
             Projectile shotFired = Instantiate(getCurrentProjectileSelected(), _arrowMuzzle.position, _arrowMuzzle.rotation);
-            Destroy(shotFired, 5f);
+            Destroy(shotFired, 3f);
             shootTimer = 0;
         }
     }
@@ -109,15 +114,52 @@ public class Player : MonoBehaviour
         {
             assaultTableCurrentIndex++;
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.GetComponent<Projectile>())
+        foreach (GameObject image in _MiniatureImage)
         {
-            if (getCurrentProjectileSelected().name == collision.gameObject.GetComponent<Projectile>().getProjectileStyle()) {
-                Destroy(collision.gameObject);
+            if (getCurrentProjectileSelected().name == image.name) {
+                image.SetActive(true);
+            }
+            if (getCurrentProjectileSelected().name != image.name)
+            {
+                image.SetActive(false);
             }
         }
+        
+    }
+
+    // Collision with bullet from attack
+    private void OnTriggerEnter(Collider collider)
+    {
+        print("OnCollisionEnter "+ collider);
+        if(!isPlayerAttacking())
+        {
+            if (collider.gameObject.GetComponent<Projectile>())
+            {
+                if (IsTheDefenserRight(collider.gameObject.GetComponent<Projectile>().getProjectileStyle()))
+                {
+                    Destroy(collider.gameObject);
+                }
+                collider.gameObject.GetComponent<Projectile>().Reduced();
+            }
+        }
+    }
+
+    private bool IsTheDefenserRight(string nameAttacker)
+    {
+        if (nameAttacker == "Knight")
+        {
+            if (getCurrentProjectileSelected().name == "Lancer") { return true; }
+            else { return false; }
+        }
+        if (nameAttacker == "Archer") { 
+            if (getCurrentProjectileSelected().name == "Knight") { return true; }
+            else { return false; }
+        }
+        if (nameAttacker == "Lancer")
+        {
+            if (getCurrentProjectileSelected().name == "Archer") { return true; }
+            else { return false; }
+        }
+        return false;
     }
 }   

@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TargetLife : MonoBehaviour
 {
 
-    [SerializeField] int _maxHP = 100;
+    [SerializeField] int _maxHP = 10;
     public float currentHP;
     [SerializeField] int _damage;
     [SerializeField] PauseManager _pauseManager;
@@ -14,12 +15,17 @@ public class TargetLife : MonoBehaviour
 
     [SerializeField] Slider _lifeBarSlider;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.GetComponent<Projectile>())
+        if (collider.gameObject.GetComponent<Projectile>())
         {
-            TakeDamage();
-            Destroy(collision.gameObject);
+
+            if (collider.gameObject.GetComponent<Projectile>().getIsReduced())
+            {
+                TakeDamage(1);
+            }
+            TakeDamage(2);
+            Destroy(collider.gameObject);
         }
     }
     void Start()
@@ -31,13 +37,13 @@ public class TargetLife : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H) && !_pauseManager.gameIsPaused && !_gameManager.gameIsFinished)
         {
-            TakeDamage();
+            TakeDamage(5);
         }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        currentHP -= _damage;
+        currentHP -= damage;
         UpdateSliderLifeBar();
     }
 
