@@ -5,18 +5,22 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] Transform _target;
-    [SerializeField] GameManager _gm;
     [SerializeField] bool _isNormand;
-
     [SerializeField] Projectile _projectile;
+    [SerializeField] float _speed;
 
-    private bool _isAttacking;
+    [SerializeField] float _distanceRadius;
+
+    public GameManager gm;
+
+    [SerializeField] bool _isAttacking;
     private float shootTimer;
+
 
     void Update()
     {
         transform.LookAt(_target);
-        if (_gm.getStatusAttack() != _isAttacking)
+        if (gm.getStatusAttack() != _isAttacking)
         {
             changePlayerAttacking();
         }
@@ -25,20 +29,24 @@ public class Player : MonoBehaviour
 
     private void changePlayerAttacking()
     {
-        if(_isNormand && _gm.getStatusAttack())
+        if(_isNormand && gm.getStatusAttack())
         {
+            _distanceRadius = 15;
             _isAttacking = false; 
         };
-        if (!_isNormand && !_gm.getStatusAttack())
+        if (!_isNormand && !gm.getStatusAttack())
         {
+            _distanceRadius = 8;
             _isAttacking = false;
         };
-        if (!_isNormand && _gm.getStatusAttack())
+        if (!_isNormand && gm.getStatusAttack())
         {
+            _distanceRadius = 15;
             _isAttacking = true;
         };
-        if (!_isNormand && !_gm.getStatusAttack())
+        if (!_isNormand && !gm.getStatusAttack())
         {
+            _distanceRadius = 8;
             _isAttacking = true;
         };
     } 
@@ -51,10 +59,20 @@ public class Player : MonoBehaviour
     public void Fire()
     {
         if(shootTimer > 2) { 
-            Debug.Log("asdkojasjkhdashjkdhjkasdjkhasdjkhas");
-            Projectile shotFired = Instantiate(_projectile, transform, true);
+            Projectile shotFired = Instantiate(_projectile, transform.localPosition, transform.rotation);
             Destroy(shotFired, 5f);
             shootTimer = 0;
         }
     }
+
+    public float getRadius()
+    {
+        return _distanceRadius;
+    }
+
+    public float getSpeed()
+    {
+        return _speed;
+    }
+
 }

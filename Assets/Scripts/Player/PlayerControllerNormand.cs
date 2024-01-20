@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class PlayerControllerNormand : MonoBehaviour
 {
-    [SerializeField] Transform _target;
-    [SerializeField] float _speed;
     [SerializeField] Player player;
-
-    public float _distanceRadius;
     public float _angle;
 
     private void Start()
@@ -23,19 +19,19 @@ public class PlayerControllerNormand : MonoBehaviour
         }
 
 
-        float x = _target.position.x + Mathf.Cos(_angle) * _distanceRadius;
-        float y = _target.position.y;
-        float z = _target.position.z + Mathf.Sin(_angle) * _distanceRadius;
+        float x = player.gm.transform.position.x+ Mathf.Cos(_angle) * player.getRadius();
+        float y = player.gm.transform.position.y;
+        float z = player.gm.transform.position.z + Mathf.Sin(_angle) * player.getRadius();
 
         transform.position = new Vector3(x, y, z);
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            _angle += _speed * Time.deltaTime;
+            _angle += player.getSpeed() * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            _angle += -_speed * Time.deltaTime;
+            _angle += -player.getSpeed() * Time.deltaTime;
         }
     }
 }
