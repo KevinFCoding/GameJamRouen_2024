@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] Transform _target;
+    private bool _isAttacking;
 
     // Start is called before the first frame update
     void Start()
@@ -17,4 +18,15 @@ public class Player : MonoBehaviour
     {
         transform.LookAt(_target);
     }
+
+    public bool isPlayerAttacking()
+    {
+        return _isAttacking;
+    }
+
+    public void Fire()
+    {
+
+    }
+
 }
