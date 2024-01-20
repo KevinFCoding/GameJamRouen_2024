@@ -19,7 +19,7 @@ public class PlayerControllerBreton : MonoBehaviour
             player.Fire();
         }
 
-            // Movement
+        // Movement
         float x = player.gm.transform.position.x + Mathf.Cos(_angle) * player.getRadius();
         float y = player.gm.transform.position.y;
         float z = player.gm.transform.position.z + Mathf.Sin(_angle) * player.getRadius();

@@ -36,25 +36,29 @@ public class Player : MonoBehaviour
         // Normand Defend
         if(_isNormand && !gm.getStatusAttack()) // If false the Normand have montsaitnniche,
         {
-            _distanceRadius = 8;
+            _distanceRadius = 5;
+            _speed = 5;
             _isAttacking = false; 
         };
         // Normand Attack
         if (_isNormand && gm.getStatusAttack())
         {
             _distanceRadius = 15;
+            _speed = 10;
             _isAttacking = true;
         };
         // Breton Def
         if (!_isNormand && gm.getStatusAttack())
         {
-            _distanceRadius = 8;
+            _distanceRadius = 5;
+            _speed = 5;
             _isAttacking = false;
         };
         // Breton Attack
         if (!_isNormand && !gm.getStatusAttack())
         {
             _distanceRadius = 15;
+            _speed = 10;
             _isAttacking = true;
         };
     } 
