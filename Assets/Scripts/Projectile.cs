@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float _speed;
+    [SerializeField] string _projectileStyle;
     public GameObject projectile;
     public float arrowDirection = 1;
 
@@ -13,8 +14,8 @@ public class Projectile : MonoBehaviour
         transform.position += Time.deltaTime * _speed * transform.forward * arrowDirection;
     }
 
-    public void setArrowSens()
+    public string getProjectileStyle()
     {
-        arrowDirection = arrowDirection * - 1;
+        return _projectileStyle;
     }
 }

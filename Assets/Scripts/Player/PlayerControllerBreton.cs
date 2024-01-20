@@ -34,5 +34,9 @@ public class PlayerControllerBreton : MonoBehaviour
         {
             _angle += -player.getSpeed() * Time.deltaTime;
         }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            player.nextTroupes();
+        }
     }
 }
