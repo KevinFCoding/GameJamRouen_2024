@@ -9,25 +9,21 @@ public class TimerGlobalManager : MonoBehaviour
 
     [SerializeField] bool isGameFinished;
     public float seconds;
-    private bool isRunning = false;
+    [SerializeField] bool isRunning = false;
     public TMP_Text scoreText;
 
 
- 
-    void Start()
-    {
-        seconds = 180;
-    }
     void Update()
     {
-        if (isRunning && isGameFinished == false)
+        if (isRunning)
         {
             IncreaseTimer();
         }
     }
 
-    void StartTimer()
+    public void StartTimer()
     {
+        seconds = 180;
         isRunning = true;
     }
 
@@ -46,7 +42,12 @@ public class TimerGlobalManager : MonoBehaviour
             scoreText.text = minute + " : " + sec.ToString();
         }
     }
-    
+
+    public void StopTimer()
+    {
+        isRunning = false;
+    }
+
 
 
 }

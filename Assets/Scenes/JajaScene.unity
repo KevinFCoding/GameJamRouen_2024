@@ -513,6 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _river: {fileID: 2041659483}
   _timer: {fileID: 361189752}
+  _timerGlobal: {fileID: 361189754}
   _target: {fileID: 973513374}
   _gameOver: {fileID: 1651816583}
   _roundSeconds: 0
@@ -814,6 +815,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: MontSaintMichel
       objectReference: {fileID: 0}
+    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.358864
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.4950097
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.4139025
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -206
+      objectReference: {fileID: 0}
     - target: {fileID: 7005035977267222702, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_Camera
       value: 
@@ -879,6 +900,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7580414241101585945, guid: 89fecfdf635eb55449ea8bf8c59133d6, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 810594902}
     - target: {fileID: 8075307270552018096, guid: 89fecfdf635eb55449ea8bf8c59133d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -960,7 +985,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4056050552213139126, guid: 89fecfdf635eb55449ea8bf8c59133d6, type: 3}
+    - {fileID: 642743351116566202, guid: 89fecfdf635eb55449ea8bf8c59133d6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89fecfdf635eb55449ea8bf8c59133d6, type: 3}

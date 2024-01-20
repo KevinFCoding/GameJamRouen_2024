@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] River _river;
     [SerializeField] TimerManager _timer;
+    [SerializeField] TimerGlobalManager _timerGlobal;
     [SerializeField] TargetLife _target;
     [SerializeField] GameOver _gameOver;
     [SerializeField] int _roundSeconds;
@@ -14,7 +15,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        PrepareStartGame();
+    }
+
+    public void PrepareStartGame()
+    {
         SetUpTimer();
+        _timerGlobal.StartTimer();
+        gameIsFinished = false;
     }
 
     void Update()
@@ -53,6 +61,7 @@ public class GameManager : MonoBehaviour
     {
         _roundSeconds = Random.Range(10, 21);
         _timer.seconds = _roundSeconds;
+        Time.timeScale = 1;
 
     }
 
@@ -63,6 +72,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        _timerGlobal.StopTimer();
+        _timer.StopTimer();
         gameIsFinished = true;
         Time.timeScale = 0;
         _gameOver.ShowScoreBoard();
