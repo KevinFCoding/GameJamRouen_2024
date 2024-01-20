@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        transform.position = _target.transform.position;
         changePlayerAttacking();
         _arrowMuzzle = gameObject.GetComponentInChildren<ArrowMuzzle>().transform;
     }
@@ -86,6 +88,12 @@ public class Player : MonoBehaviour
     {
         return _speed;
     }
+
+    public Vector3 getTargetPosition()
+    {
+        return _target.position;
+    }
+
 
     private void OnCollisionEnter(Collision collision)
     {
