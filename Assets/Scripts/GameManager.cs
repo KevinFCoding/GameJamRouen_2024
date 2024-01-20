@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
     public void SetUpTimer()
     {
-        _roundSeconds = Random.RandomRange(10, 20);
+        _roundSeconds = Random.Range(10, 21);
         _timer.seconds = _roundSeconds;
 
     }
@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     {
         return _statusAttack;
     }
+
     public void GameOver()
     {
         gameIsFinished = true;
