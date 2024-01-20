@@ -16,6 +16,10 @@ public class Player : MonoBehaviour
     [SerializeField] bool _isAttacking;
     private float shootTimer;
 
+    private void Start()
+    {
+        changePlayerAttacking();
+    }
 
     void Update()
     {
