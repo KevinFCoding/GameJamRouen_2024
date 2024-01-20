@@ -51,21 +51,20 @@ public class GameManager : MonoBehaviour
 
     public void SetUpTimer()
     {
-        _roundSeconds = Random.RandomRange(10, 20);
+        _roundSeconds = Random.Range(10, 21);
         _timer.seconds = _roundSeconds;
 
     }
 
-<<<<<<< Updated upstream
     public bool getStatusAttack()
     {
         return _statusAttack;
-=======
+    }
+
     public void GameOver()
     {
         gameIsFinished = true;
         Time.timeScale = 0;
         _gameOver.ShowScoreBoard();
->>>>>>> Stashed changes
     }
 }
