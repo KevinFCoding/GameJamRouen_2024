@@ -17,7 +17,6 @@ public class TimerGlobalManager : MonoBehaviour
     void Start()
     {
         seconds = 180;
-        StartTimer();
     }
     void Update()
     {
