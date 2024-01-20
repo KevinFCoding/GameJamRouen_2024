@@ -16,46 +16,46 @@ public class Player : MonoBehaviour
     [SerializeField] bool _isAttacking;
     private float shootTimer;
 
+    public Transform _arrowMuzzle;
+
     private void Start()
     {
         changePlayerAttacking();
+        _arrowMuzzle = gameObject.GetComponentInChildren<ArrowMuzzle>().transform;
     }
 
     void Update()
     {
         transform.LookAt(_target);
-        if (gm.getStatusAttack() != _isAttacking)
-        {
-            changePlayerAttacking();
-        }
+        changePlayerAttacking();
         shootTimer += Time.deltaTime;
     }
 
     private void changePlayerAttacking()
     {
-        // Normand Attack
-        if(_isNormand && gm.getStatusAttack())
-        {
-            _distanceRadius = 15;
-            _isAttacking = false; 
-        };
         // Normand Defend
-        if (_isNormand && !gm.getStatusAttack())
+        if(_isNormand && !gm.getStatusAttack()) // If false the Normand have montsaitnniche,
         {
             _distanceRadius = 8;
+            _isAttacking = false; 
+        };
+        // Normand Attack
+        if (_isNormand && gm.getStatusAttack())
+        {
+            _distanceRadius = 15;
             _isAttacking = true;
+        };
+        // Breton Def
+        if (!_isNormand && gm.getStatusAttack())
+        {
+            _distanceRadius = 8;
+            _isAttacking = false;
         };
         // Breton Attack
         if (!_isNormand && !gm.getStatusAttack())
         {
             _distanceRadius = 15;
             _isAttacking = true;
-        };
-        // Breton Defend
-        if (!_isNormand && !gm.getStatusAttack())
-        {
-            _distanceRadius = 8;
-            _isAttacking = false;
         };
     } 
 
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
     public void Fire()
     {
         if(shootTimer > 2) { 
-            Projectile shotFired = Instantiate(_projectile, transform.localPosition, transform.rotation);
+            Projectile shotFired = Instantiate(_projectile, _arrowMuzzle.position, _arrowMuzzle.rotation);
             Destroy(shotFired, 5f);
             shootTimer = 0;
         }
@@ -83,4 +83,11 @@ public class Player : MonoBehaviour
         return _speed;
     }
 
-}
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<Projectile>())
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+}   

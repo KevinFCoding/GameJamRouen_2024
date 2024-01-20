@@ -13,7 +13,7 @@ public class PlayerControllerNormand : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) && player.isPlayerAttacking())
+        if (Input.GetKey(KeyCode.UpArrow) && player.isPlayerAttacking())
         {
             player.Fire();
         }
