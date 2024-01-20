@@ -6,8 +6,11 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] River _river;
     [SerializeField] TimerManager _timer;
+    [SerializeField] TargetLife _target;
+    [SerializeField] GameOver _gameOver;
     [SerializeField] int _roundSeconds;
     [SerializeField] bool _statusAttack;
+    public bool gameIsFinished;
 
     void Start()
     {
@@ -22,6 +25,11 @@ public class GameManager : MonoBehaviour
             _timer.isFinishTimer = false;
 
 
+        }
+
+        if (_target.currentHP == 0)
+        {
+            GameOver();
         }
     }
 
@@ -48,8 +56,16 @@ public class GameManager : MonoBehaviour
 
     }
 
+<<<<<<< Updated upstream
     public bool getStatusAttack()
     {
         return _statusAttack;
+=======
+    public void GameOver()
+    {
+        gameIsFinished = true;
+        Time.timeScale = 0;
+        _gameOver.ShowScoreBoard();
+>>>>>>> Stashed changes
     }
 }

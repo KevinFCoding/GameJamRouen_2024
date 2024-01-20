@@ -6,16 +6,18 @@ public class TargetLife : MonoBehaviour
 {
 
     [SerializeField] int _maxHP = 100;
-    [SerializeField] int _currentHP;
+    public int currentHP;
     [SerializeField] int _damage;
+    [SerializeField] PauseManager _pauseManager;
+    [SerializeField] GameManager _gameManager;
     void Start()
     {
-        _currentHP = _maxHP;
+        currentHP = _maxHP;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H) && !_pauseManager.gameIsPaused && !_gameManager.gameIsFinished)
         {
             TakeDamage();
         }
@@ -23,6 +25,6 @@ public class TargetLife : MonoBehaviour
 
     public void TakeDamage()
     {
-        _currentHP -= _damage;
+        currentHP -= _damage;
     }
 }
