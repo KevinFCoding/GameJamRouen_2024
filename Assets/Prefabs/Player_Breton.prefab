@@ -108,9 +108,9 @@ MonoBehaviour:
   - {fileID: 5027431261187058804, guid: 94406d8ab11382e46b18780ca2f83e86, type: 3}
   - {fileID: 5027431261187058804, guid: 0d5f924252e7a1642a97930485b699f6, type: 3}
   - {fileID: 5027431261187058804, guid: 23605ed1a5498ab42b9757022f510871, type: 3}
+  _MiniatureImage: []
   _speed: 10
   _distanceRadius: 0
-  _textCanvas: {fileID: 0}
   _isAttacking: 1
   _arrowMuzzle: {fileID: 2449093393604241871}
 --- !u!114 &2519059763063846490
@@ -141,7 +141,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
