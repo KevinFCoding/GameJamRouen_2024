@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4746572335282184838}
   - component: {fileID: 2075003092929202498}
+  - component: {fileID: 6732721594022899457}
   m_Layer: 0
   m_Name: River
   m_TagString: Untagged
@@ -131,3 +132,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentState: 0
   _spriteRiver: {fileID: 3038902111549592376}
+--- !u!95 &6732721594022899457
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5486852702529815991}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5298623b8bdda80488d24d4633fbe22a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
