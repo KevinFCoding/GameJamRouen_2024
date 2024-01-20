@@ -18,6 +18,6 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeMusic()
     {
-        if(_gameManager.getStatusAttack)
+       
     }
 }
