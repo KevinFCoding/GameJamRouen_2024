@@ -43,6 +43,6 @@ public class TargetLife : MonoBehaviour
 
     public void UpdateSliderLifeBar()
     {
-        _lifeBarSlider.value = currentHP / 100;
+        _lifeBarSlider.value = currentHP/100;
     }
 }

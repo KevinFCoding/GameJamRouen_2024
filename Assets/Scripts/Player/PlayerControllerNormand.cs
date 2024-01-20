@@ -32,9 +32,5 @@ public class PlayerControllerNormand : MonoBehaviour
         {
             _angle += -player.getSpeed() * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            player.nextTroupes();
-        }
     }
 }

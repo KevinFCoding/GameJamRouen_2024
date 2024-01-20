@@ -101,17 +101,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 609d855eeb04d984bbfae839d0ac8c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
   _target: {fileID: 0}
   _isNormand: 0
-  _projectile:
-  - {fileID: 5027431261187058804, guid: 94406d8ab11382e46b18780ca2f83e86, type: 3}
-  - {fileID: 5027431261187058804, guid: 0d5f924252e7a1642a97930485b699f6, type: 3}
-  - {fileID: 5027431261187058804, guid: 23605ed1a5498ab42b9757022f510871, type: 3}
+  _projectile: {fileID: 5027431261187058804, guid: 94406d8ab11382e46b18780ca2f83e86, type: 3}
   _speed: 10
   _distanceRadius: 0
+  gm: {fileID: 0}
   _isAttacking: 1
-  _arrowMuzzle: {fileID: 0}
 --- !u!114 &2519059763063846490
 MonoBehaviour:
   m_ObjectHideFlags: 0
