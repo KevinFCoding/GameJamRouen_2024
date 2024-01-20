@@ -47,4 +47,9 @@ public class GameManager : MonoBehaviour
         _timer.seconds = _roundSeconds;
 
     }
+
+    public bool getStatusAttack()
+    {
+        return _statusAttack;
+    }
 }
