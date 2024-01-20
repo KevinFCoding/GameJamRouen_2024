@@ -4,41 +4,33 @@ using UnityEngine;
 
 public class PlayerControllerNormand : MonoBehaviour
 {
-    [SerializeField] Transform _target;
-    [SerializeField] float _speed;
     [SerializeField] Player player;
+    private float _angle;
 
-    public float _distanceRadius;
-    public float _angle;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        player = gameObject.GetComponent<Player>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) && player.isPlayerAttacking())
+        if (Input.GetKey(KeyCode.UpArrow) && player.isPlayerAttacking())
         {
             player.Fire();
         }
 
-
-        float x = _target.position.x + Mathf.Cos(_angle) * _distanceRadius;
-        float y = _target.position.y;
-        float z = _target.position.z + Mathf.Sin(_angle) * _distanceRadius;
+        float x = player.gm.transform.position.x+ Mathf.Cos(_angle) * player.getRadius();
+        float y = player.gm.transform.position.y;
+        float z = player.gm.transform.position.z + Mathf.Sin(_angle) * player.getRadius();
 
         transform.position = new Vector3(x, y, z);
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            _angle += _speed * Time.deltaTime;
+            _angle += player.getSpeed() * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            _angle += -_speed * Time.deltaTime;
+            _angle += -player.getSpeed() * Time.deltaTime;
         }
     }
 }

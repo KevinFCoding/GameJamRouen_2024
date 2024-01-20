@@ -5,25 +5,64 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] Transform _target;
-    [SerializeField] GameManager _gm;
-    private bool _isAttacking;
+    [SerializeField] bool _isNormand;
+    [SerializeField] Projectile _projectile;
+    [SerializeField] float _speed;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float _distanceRadius;
+
+    public GameManager gm;
+
+    [SerializeField] bool _isAttacking;
+    private float shootTimer;
+
+    public Transform _arrowMuzzle;
+
+    private void Start()
     {
-        
+        changePlayerAttacking();
+        _arrowMuzzle = gameObject.GetComponentInChildren<ArrowMuzzle>().transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.LookAt(_target);
+        changePlayerAttacking();
+        shootTimer += Time.deltaTime;
     }
 
     private void changePlayerAttacking()
     {
-        //_gm.
+        // Normand Defend
+        if(_isNormand && !gm.getStatusAttack()) // If false the Normand have montsaitnniche,
+        {
+            _distanceRadius = 5;
+            _speed = 5;
+            _isAttacking = false; 
+        };
+        // Normand Attack
+        if (_isNormand && gm.getStatusAttack())
+        {
+            _distanceRadius = 15;
+            _speed = 10;
+            _isAttacking = true;
+        };
+        // Breton Def
+        if (!_isNormand && gm.getStatusAttack())
+        {
+            _distanceRadius = 5;
+            _speed = 5;
+            _isAttacking = false;
+        };
+        // Breton Attack
+        if (!_isNormand && !gm.getStatusAttack())
+        {
+            _distanceRadius = 15;
+            _speed = 10;
+            _isAttacking = true;
+        };
     } 
+
     public bool isPlayerAttacking()
     {
         return _isAttacking;
@@ -31,6 +70,28 @@ public class Player : MonoBehaviour
 
     public void Fire()
     {
-
+        if(shootTimer > 2) { 
+            Projectile shotFired = Instantiate(_projectile, _arrowMuzzle.position, _arrowMuzzle.rotation);
+            Destroy(shotFired, 5f);
+            shootTimer = 0;
+        }
     }
-}
+
+    public float getRadius()
+    {
+        return _distanceRadius;
+    }
+
+    public float getSpeed()
+    {
+        return _speed;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<Projectile>())
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+}   
