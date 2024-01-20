@@ -33,8 +33,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 2.5, y: 0}
-  m_SizeDelta: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -0.45800018, y: 0}
+  m_SizeDelta: {x: -10.915, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5615941539049924435
 GameObject:
@@ -114,18 +114,30 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1412247006044420953}
-  m_HandleRect: {fileID: 0}
+  m_HandleRect: {fileID: 7319832745610246959}
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5734973877468184455}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5734973877468184455
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,8 +186,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHP: 100
-  _currentHP: 0
-  _damage: 1
+  currentHP: 0
+  _damage: 10
+  _pauseManager: {fileID: 0}
+  _gameManager: {fileID: 0}
+  _lifeBarSlider: {fileID: 396462872146034685}
 --- !u!1 &5751597173161916844
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +562,7 @@ RectTransform:
   m_Father: {fileID: 6558394888444217457}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
