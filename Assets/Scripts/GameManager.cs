@@ -15,7 +15,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (_timer.isFinishTimer)
+        {
+           //SwitchAttack();
+            print("SWITCH");
+            _timer.isFinishTimer = false;
+
+        }
     }
 
     public void SwitchAttack()

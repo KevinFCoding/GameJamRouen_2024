@@ -277,6 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seconds: 0
   _gameManager: {fileID: 810594902}
+  isFinishTimer: 0
 --- !u!4 &361189753
 Transform:
   m_ObjectHideFlags: 0
@@ -561,6 +562,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1667432265839064701, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667432265839064701, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667432265839064701, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2144874491947431239, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -604,26 +617,6 @@ PrefabInstance:
     - target: {fileID: 5734973877468184455, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_Name
       value: MontSaintMichel
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.49089
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.49089
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.49089
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7005035977267222702, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_Camera

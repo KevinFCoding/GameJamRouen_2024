@@ -11,6 +11,7 @@ public class TimerManager : MonoBehaviour
     public float seconds;
     private bool _isRunning = false;
     [SerializeField] GameManager _gameManager;
+    public bool isFinishTimer;
  
 
 
@@ -33,7 +34,9 @@ public class TimerManager : MonoBehaviour
         seconds -= Time.deltaTime;
         if(seconds <= 0)
         {
+            isFinishTimer = true;
             _gameManager.SetUpTimer();
+
         }
     }
 
