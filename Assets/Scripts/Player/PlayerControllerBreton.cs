@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerA : MonoBehaviour
+public class PlayerControllerBreton : MonoBehaviour
 {
     [SerializeField] Transform _target;
     [SerializeField] float _speed;

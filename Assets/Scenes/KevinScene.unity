@@ -570,7 +570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1330937538525054218, guid: ea34176d6c1cd554f9b36f8b14c4ed9e, type: 3}
       propertyPath: m_Name
-      value: Player_A
+      value: Player_Breton
       objectReference: {fileID: 0}
     - target: {fileID: 2519059763063846490, guid: ea34176d6c1cd554f9b36f8b14c4ed9e, type: 3}
       propertyPath: _target
@@ -639,7 +639,7 @@ PrefabInstance:
       objectReference: {fileID: 953965280}
     - target: {fileID: 5777736944897040844, guid: acc2bb9ef507c4441ae988afcb5d89ec, type: 3}
       propertyPath: m_Name
-      value: Player_B
+      value: Player_Normand
       objectReference: {fileID: 0}
     - target: {fileID: 6560078292701148157, guid: acc2bb9ef507c4441ae988afcb5d89ec, type: 3}
       propertyPath: _target

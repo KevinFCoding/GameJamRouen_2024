@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerB : MonoBehaviour
+public class PlayerControllerNormand : MonoBehaviour
 {
     [SerializeField] Transform _target;
     [SerializeField] float _speed;
@@ -20,8 +20,6 @@ public class PlayerControllerB : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         if (Input.GetKey(KeyCode.W) && player.isPlayerAttacking())
         {
             player.Fire();
