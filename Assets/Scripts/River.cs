@@ -24,12 +24,12 @@ public class River : MonoBehaviour
         if(_currentState == false)
         {
             // Normandie Attaque / Bretagne Défend
-           // _spriteRiver.flipX = true; 
+            _spriteRiver.flipX = true; 
         }
         else
         {
             // Bretagne Attaque / Normandie Défend
-           // _spriteRiver.flipX = false;
+            _spriteRiver.flipX = false;
 
         }
     }

@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
 {
 
     [SerializeField] GameObject _gameOverCanvas;
+    [SerializeField] GameManager _gameManager;
     void Start()
     {
         
@@ -24,13 +25,16 @@ public class GameOver : MonoBehaviour
 
     public void Retry()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+
     }
 
     public void MainMenu()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
+        _gameManager.gameIsFinished = false;
+
     }
 }

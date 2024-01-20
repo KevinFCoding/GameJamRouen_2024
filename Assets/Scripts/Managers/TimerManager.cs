@@ -13,19 +13,9 @@ public class TimerManager : MonoBehaviour
     [SerializeField] GameManager _gameManager;
     public bool isFinishTimer;
  
-
-
-    private void Awake()
-    {
-    }
-    void Start()
-    {
-    }
     void Update()
     {
-       
-            IncreaseTimer();
-        
+        IncreaseTimer();
     }
 
   
@@ -38,6 +28,10 @@ public class TimerManager : MonoBehaviour
             _gameManager.SetUpTimer();
 
         }
+    }
+    public void StopTimer()
+    {
+        _isRunning = false;
     }
 
 

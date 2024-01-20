@@ -8,6 +8,7 @@ public class MainMenuManager : MonoBehaviour
 {
 
     [SerializeField] GameObject _credits;
+    [SerializeField] GameObject _controls;
     void Start()
     {
         
@@ -36,5 +37,11 @@ public class MainMenuManager : MonoBehaviour
     public void CloseCredits()
     {
         _credits.SetActive(false);
+    }
+
+    public void ShowControls()
+    {
+        CloseCredits();
+        _controls.gameObject.SetActive(true);
     }
 }

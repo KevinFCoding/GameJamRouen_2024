@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
 public class TargetLife : MonoBehaviour
@@ -12,6 +13,9 @@ public class TargetLife : MonoBehaviour
     [SerializeField] int _damage;
     [SerializeField] PauseManager _pauseManager;
     [SerializeField] GameManager _gameManager;
+    [SerializeField] PostProcessVolume _vignette;
+    [SerializeField] CameraShaking _cameraShaking;
+
 
     [SerializeField] Slider _lifeBarSlider;
 
@@ -45,10 +49,13 @@ public class TargetLife : MonoBehaviour
     {
         currentHP -= damage;
         UpdateSliderLifeBar();
+        _cameraShaking.shakeshake = true;
+        
     }
 
     public void UpdateSliderLifeBar()
     {
         _lifeBarSlider.value = currentHP / 100;
+        _vignette.weight += 0.10f;
     }
 }
