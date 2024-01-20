@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+
+    [SerializeField] GameManager _gameManager;
     void Start()
     {
         
@@ -12,5 +14,10 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ChangeMusic()
+    {
+
     }
 }

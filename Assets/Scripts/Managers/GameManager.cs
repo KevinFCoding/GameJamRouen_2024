@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int _roundSeconds;
     [SerializeField] bool _statusAttack;
     public bool gameIsFinished;
+    [SerializeField] Animator _animRiver;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
         {
             SwitchAttack();
             _timer.isFinishTimer = false;
+            _animRiver.enabled = false;
 
 
         }
@@ -38,6 +40,11 @@ public class GameManager : MonoBehaviour
         if (_target.currentHP == 0)
         {
             GameOver();
+        }
+
+        if(_timer.seconds <= 3)
+        {
+            _animRiver.enabled = true;
         }
     }
 
