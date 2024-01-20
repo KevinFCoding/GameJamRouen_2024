@@ -50,7 +50,7 @@ public class TargetLife : MonoBehaviour
         currentHP -= damage;
         UpdateSliderLifeBar();
         _cameraShaking.shakeshake = true;
-        
+
     }
 
     public void UpdateSliderLifeBar()

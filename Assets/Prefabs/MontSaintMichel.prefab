@@ -147,7 +147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2144874491947431239}
-  - component: {fileID: 9114320235146336057}
+  - component: {fileID: 492230928075822120}
   m_Layer: 0
   m_Name: MontSaintMichel
   m_TagString: Target
@@ -173,7 +173,7 @@ Transform:
   - {fileID: 4257134415772041357}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9114320235146336057
+--- !u!114 &492230928075822120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,15 +182,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5734973877468184455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d81aad0b5de45448a64d27581c8b1cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 1769f76f989fd5649b387927f334a8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHP: 100
+  _maxHP: 10
   currentHP: 0
-  _damage: 10
+  _damage: 0
   _pauseManager: {fileID: 0}
   _gameManager: {fileID: 0}
-  _lifeBarSlider: {fileID: 396462872146034685}
+  _vignette: {fileID: 0}
+  _cameraShaking: {fileID: 0}
+  _lifeBarSlider: {fileID: 0}
 --- !u!1 &5751597173161916844
 GameObject:
   m_ObjectHideFlags: 0
