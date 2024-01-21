@@ -24,7 +24,7 @@ public class AudioManager : MonoBehaviour
     {
         if (_isBretonDefend)
         {
-            _source.Play(_normandMusic);
+           // _source.Play(_normandMusic);
         }
     }
 }

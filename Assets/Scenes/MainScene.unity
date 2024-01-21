@@ -690,6 +690,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 782325847}
+  _isBretonDefend: 0
+  _source: {fileID: 0}
+  _bretonMusic: {fileID: 0}
+  _normandMusic: {fileID: 0}
 --- !u!82 &313283239
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6641,6 +6645,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 396462872146034685, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: _vignette
       value: 
@@ -6705,9 +6713,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3525341724642528571, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525341724642528571, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 69a0a8263589b4046a85ec8acdd5d0cf, type: 3}
     - target: {fileID: 5734973877468184455, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_Name
       value: MontSaintMichel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 7319832745610246959, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6721,6 +6741,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9050557224478280961, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050557224478280961, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b7d40237e91c78c4191812af54b343a1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7815859398784681609, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
