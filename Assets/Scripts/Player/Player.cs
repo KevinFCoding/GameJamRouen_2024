@@ -182,10 +182,11 @@ public class Player : MonoBehaviour
             {
                 //if (IsTheDefenserRight(collider.gameObject.GetComponent<Projectile>().getProjectileStyle()))
                 //{
-                    Destroy(collider.gameObject);
+                Destroy(collider.gameObject);
                 int soundToPlay = Random.Range(0, _defenseSound.Count);
                 _playerAudioSource.PlayOneShot(_defenseSound[soundToPlay]);
-                _ParticleSystem.Emit(10);
+                _ParticleSystem.Play();
+
                 //}
                 //collider.gameObject.GetComponent<Projectile>().Reduced();
             }

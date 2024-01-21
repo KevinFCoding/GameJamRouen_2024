@@ -28,7 +28,7 @@ public class TargetLife : MonoBehaviour
         {
 
             TakeDamage(1);
-            particleSystem.Emit(10);
+            particleSystem.Play();
             //if (collider.gameObject.GetComponent<Projectile>().getIsReduced())
             //{
             //    TakeDamage(1);
