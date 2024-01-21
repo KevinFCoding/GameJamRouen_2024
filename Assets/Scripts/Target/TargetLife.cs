@@ -20,6 +20,7 @@ public class TargetLife : MonoBehaviour
     [SerializeField] List<AudioClip> _takeDamageSound;
 
     [SerializeField] Slider _lifeBarSlider;
+    [SerializeField] ParticleSystem particleSystem;
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -27,6 +28,7 @@ public class TargetLife : MonoBehaviour
         {
 
             TakeDamage(1);
+            particleSystem.Emit(10);
             //if (collider.gameObject.GetComponent<Projectile>().getIsReduced())
             //{
             //    TakeDamage(1);

@@ -188,6 +188,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1447598185}
     - target: {fileID: 8283513200530626090, guid: ea34176d6c1cd554f9b36f8b14c4ed9e, type: 3}
+      propertyPath: _ParticleSystem
+      value: 
+      objectReference: {fileID: 3881247006501733926, guid: 10f4ed64cafd9fd438e1186b74dd09a3, type: 3}
+    - target: {fileID: 8283513200530626090, guid: ea34176d6c1cd554f9b36f8b14c4ed9e, type: 3}
       propertyPath: _positionSwapSound
       value: 
       objectReference: {fileID: 8300000, guid: 33e0e1475035a604cb52ce4e461e0987, type: 3}
@@ -6661,10 +6665,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 396462872146034685, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: _vignette
       value: 
@@ -6685,6 +6685,10 @@ PrefabInstance:
       propertyPath: _cameraShaking
       value: 
       objectReference: {fileID: 1498422010}
+    - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 3724029091764479425, guid: a55be618f057ee5469c5279c56d82995, type: 3}
     - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: _takeDamageSound.Array.size
       value: 3
@@ -6768,10 +6772,6 @@ PrefabInstance:
     - target: {fileID: 5734973877468184455, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_Name
       value: MontSaintMichel
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558394888444217457, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 7319832745610246959, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7126,6 +7126,10 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1447598185}
+    - target: {fileID: 3561198664815660055, guid: acc2bb9ef507c4441ae988afcb5d89ec, type: 3}
+      propertyPath: _ParticleSystem
+      value: 
+      objectReference: {fileID: 3881247006501733926, guid: 10f4ed64cafd9fd438e1186b74dd09a3, type: 3}
     - target: {fileID: 3561198664815660055, guid: acc2bb9ef507c4441ae988afcb5d89ec, type: 3}
       propertyPath: _positionSwapSound
       value: 
