@@ -78,6 +78,9 @@ public class Player : MonoBehaviour
             {
                 _shield.SetActive(true);
             }
+            if(_arrow.active) {
+                _arrow.SetActive(false);
+            }
         }
 
         // Normand Defend
@@ -90,7 +93,7 @@ public class Player : MonoBehaviour
         // Normand Attack
         if (_isNormand && gm.getStatusAttack())
         {
-            _distanceRadius = 15;
+            _distanceRadius = 20;
             _speed = 4.5f;
             _isAttacking = true;
         };
@@ -104,7 +107,7 @@ public class Player : MonoBehaviour
         // Breton Attack
         if (!_isNormand && !gm.getStatusAttack())
         {
-            _distanceRadius = 15;
+            _distanceRadius = 20;
             _speed = 4.5f;
             _isAttacking = true;
         };
