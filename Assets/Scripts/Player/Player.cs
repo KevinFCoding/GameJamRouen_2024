@@ -80,7 +80,6 @@ public class Player : MonoBehaviour
             _isAttacking = true;
         };
          // Avoid direct shoot after switch
-        _playerAudioSource.PlayOneShot(_positionSwapSound);
     } 
 
     public bool isPlayerAttacking()
@@ -96,7 +95,7 @@ public class Player : MonoBehaviour
             shootTimer = 0;
 
             int soundToPlay = Random.Range(0, _attackSound.Count);
-            _playerAudioSource.PlayOneShot(_attackSound[soundToPlay - 1]);
+            _playerAudioSource.PlayOneShot(_attackSound[soundToPlay]);
         }
     }
 
@@ -152,7 +151,7 @@ public class Player : MonoBehaviour
                 //{
                     Destroy(collider.gameObject);
                 int soundToPlay = Random.Range(0, _defenseSound.Count);
-                _playerAudioSource.PlayOneShot(_defenseSound[soundToPlay - 1]);
+                _playerAudioSource.PlayOneShot(_defenseSound[soundToPlay]);
 
                 //}
                 //collider.gameObject.GetComponent<Projectile>().Reduced();
