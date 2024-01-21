@@ -15,9 +15,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] AudioManager _audiomanager;
     [SerializeField] AudioClip _swap;
 
+    private bool isMontSaintMichelDead = false;
+
+    private int MsMState = 0;
+
     void Start()
     {
         PrepareStartGame();
+        MsMState = 0; // Used for endGame
+        isMontSaintMichelDead = false; // Used for endGame
     }
 
     public void PrepareStartGame()
@@ -38,6 +44,7 @@ public class GameManager : MonoBehaviour
 
         if (_target.currentHP <= 0)
         {
+            isMontSaintMichelDead = true;
             GameOver();
         }
 
@@ -53,13 +60,12 @@ public class GameManager : MonoBehaviour
 
     public void SwitchAttack()
     {
-        if (_statusAttack == true)
+        if (_statusAttack == true) // if true then the bretagne is attacking
         {
             _statusAttack = false;
             _river._currentState = _statusAttack;
             _audiomanager._isBretonDefend = false;
             _audiomanager.ChangeMusic();
-
         }
         else
         {
@@ -93,4 +99,22 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         _gameOver.ShowScoreBoard();
     }
+
+    public int getMsMFinalState()
+    {
+        return MsMState;
+    }
+
+    public void setMsMFinalState(int index)
+    {
+        MsMState = index;
+    }
+
+    public bool getIsMontSaintMichelDead()
+    {
+        return isMontSaintMichelDead;
+    }
+
+
+
 }
