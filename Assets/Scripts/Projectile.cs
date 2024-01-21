@@ -6,7 +6,6 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] float _speed;
     [SerializeField] string _projectileStyle;
-    public GameObject projectile;
 
     private bool _isReduced = false;
 

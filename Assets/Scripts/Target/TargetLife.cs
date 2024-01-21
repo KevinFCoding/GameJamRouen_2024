@@ -24,14 +24,15 @@ public class TargetLife : MonoBehaviour
         if (collider.gameObject.GetComponent<Projectile>())
         {
 
-            if (collider.gameObject.GetComponent<Projectile>().getIsReduced())
-            {
-                TakeDamage(1);
-            }
-            else
-            {
-                TakeDamage(2);
-            }
+            TakeDamage(1);
+            //if (collider.gameObject.GetComponent<Projectile>().getIsReduced())
+            //{
+            //    TakeDamage(1);
+            //}
+            //else
+            //{
+            //    TakeDamage(2);
+            //}
             Destroy(collider.gameObject);
         }
     }

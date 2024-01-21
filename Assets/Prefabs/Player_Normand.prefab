@@ -256,14 +256,7 @@ MonoBehaviour:
   gm: {fileID: 0}
   _target: {fileID: 0}
   _isNormand: 1
-  _projectile:
-  - {fileID: 5027431261187058804, guid: 94406d8ab11382e46b18780ca2f83e86, type: 3}
-  - {fileID: 5027431261187058804, guid: 0d5f924252e7a1642a97930485b699f6, type: 3}
-  - {fileID: 5027431261187058804, guid: 23605ed1a5498ab42b9757022f510871, type: 3}
-  _MiniatureImage:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _projectile: {fileID: 5027431261187058804, guid: d0c7fc8be523ebc4d818b50660fa256f, type: 3}
   _speed: 6
   _distanceRadius: 0
   _isAttacking: 0
@@ -357,6 +350,10 @@ PrefabInstance:
     - target: {fileID: 177916889454957241, guid: dc8583e6cafa02544ae9391a520f1125, type: 3}
       propertyPath: m_Name
       value: Bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 177916889454957241, guid: dc8583e6cafa02544ae9391a520f1125, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3123044543752196063, guid: dc8583e6cafa02544ae9391a520f1125, type: 3}
       propertyPath: m_LocalScale.x

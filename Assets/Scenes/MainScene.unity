@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Breton
       objectReference: {fileID: 0}
+    - target: {fileID: 3141631775427168296, guid: ea34176d6c1cd554f9b36f8b14c4ed9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8283513200530626090, guid: ea34176d6c1cd554f9b36f8b14c4ed9e, type: 3}
       propertyPath: gm
       value: 
@@ -6155,6 +6159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasNormand
       objectReference: {fileID: 0}
+    - target: {fileID: 1799664927154306024, guid: 3401d596eacafa549b3d1a743a8af96b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2067432751847660263, guid: 3401d596eacafa549b3d1a743a8af96b, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -6561,6 +6569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasBreton
       objectReference: {fileID: 0}
+    - target: {fileID: 6322788368338740037, guid: 49c3f68fdbdb5e54dab5ae04afdb3920, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6629838897369148631, guid: 49c3f68fdbdb5e54dab5ae04afdb3920, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -6642,6 +6654,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1268164853646602370, guid: acc2bb9ef507c4441ae988afcb5d89ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191913514526766520, guid: acc2bb9ef507c4441ae988afcb5d89ec, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3561198664815660055, guid: acc2bb9ef507c4441ae988afcb5d89ec, type: 3}
