@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] AudioClip _swap;
     [SerializeField] AudioClip _rain;
 
+    [SerializeField] ParticleSystem _rain;
+
     private bool isMontSaintMichelDead = false;
     private bool isRainFalling = false;
 
