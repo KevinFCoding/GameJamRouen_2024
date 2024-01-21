@@ -703,9 +703,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 782325847}
   _isBretonDefend: 0
-  _source: {fileID: 0}
-  _bretonMusic: {fileID: 0}
-  _normandMusic: {fileID: 0}
+  _source: {fileID: 313283239}
+  _clips:
+  - {fileID: 8300000, guid: 11dd7a9cf49532e4d87d6861c8a87ed0, type: 3}
+  - {fileID: 8300000, guid: 89b7b2b1bdfa8c54eb39723491badbe0, type: 3}
+  _timerGlobalManager: {fileID: 2062315836}
 --- !u!82 &313283239
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6762,7 +6764,7 @@ PrefabInstance:
     - target: {fileID: 3525341724642528571, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 69a0a8263589b4046a85ec8acdd5d0cf, type: 3}
+      objectReference: {fileID: 21300000, guid: b7d40237e91c78c4191812af54b343a1, type: 3}
     - target: {fileID: 5734973877468184455, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_Name
       value: MontSaintMichel
@@ -6790,7 +6792,7 @@ PrefabInstance:
     - target: {fileID: 9050557224478280961, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b7d40237e91c78c4191812af54b343a1, type: 3}
+      objectReference: {fileID: 21300000, guid: 69a0a8263589b4046a85ec8acdd5d0cf, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7815859398784681609, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}

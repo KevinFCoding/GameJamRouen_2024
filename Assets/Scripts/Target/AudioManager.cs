@@ -6,25 +6,36 @@ public class AudioManager : MonoBehaviour
 {
 
     [SerializeField] GameManager _gameManager;
-    [SerializeField] bool _isBretonDefend;
+    public bool _isBretonDefend;
     [SerializeField] AudioSource _source;
-    [SerializeField] AudioClip _bretonMusic;
-    [SerializeField] AudioClip _normandMusic;
+    [SerializeField] List<AudioClip> _clips;
+    [SerializeField] TimerGlobalManager _timerGlobalManager;
     void Start()
     {
-        
+        ChangeMusic();
     }
 
     void Update()
     {
-        
+        if(_timerGlobalManager.seconds <= 10)
+        {
+            _source.pitch = 1.16f;
+        }
     }
 
     public void ChangeMusic()
     {
         if (_isBretonDefend)
         {
-           // _source.Play(_normandMusic);
+            _source.clip = _clips[1];
+            _source.loop = true;
+            _source.Play();
+        }
+        else
+        {
+            _source.clip = _clips[0];
+            _source.loop = true;
+            _source.Play();
         }
     }
 }
