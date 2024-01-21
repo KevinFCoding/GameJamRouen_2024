@@ -6,6 +6,10 @@ public class AudioManager : MonoBehaviour
 {
 
     [SerializeField] GameManager _gameManager;
+    [SerializeField] bool _isBretonDefend;
+    [SerializeField] AudioSource _source;
+    [SerializeField] AudioClip _bretonMusic;
+    [SerializeField] AudioClip _normandMusic;
     void Start()
     {
         
@@ -18,6 +22,9 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeMusic()
     {
-       
+        if (_isBretonDefend)
+        {
+            _source.Play(_normandMusic);
+        }
     }
 }
