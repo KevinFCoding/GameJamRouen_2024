@@ -79,7 +79,8 @@ public class TargetLife : MonoBehaviour
         _vignette.weight += damage / 100;
 
         int soundToPlay = Random.Range(0, _takeDamageSound.Count);
-        _audiomanager.GetComponent<AudioSource>().PlayOneShot(_takeDamageSound[soundToPlay]); ;
+        _audiomanager.GetComponent<AudioSource>().PlayOneShot(_takeDamageSound[soundToPlay]);
+        particleSystem.Play();
     }
 
     public void UpdateSliderLifeBar()
