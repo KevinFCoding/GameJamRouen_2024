@@ -779,9 +779,11 @@ MonoBehaviour:
   _gameManager: {fileID: 782325847}
   _isBretonDefend: 0
   _source: {fileID: 313283239}
+  _sourceSound: {fileID: 189897594}
   _clips:
   - {fileID: 8300000, guid: 00dc9b0ef2c25a142b6197091e6deb5c, type: 3}
   - {fileID: 8300000, guid: 89b7b2b1bdfa8c54eb39723491badbe0, type: 3}
+  _bell: {fileID: 8300000, guid: 7dd879960931ccd4397d1431d72a6b12, type: 3}
   _timerGlobalManager: {fileID: 2062315836}
 --- !u!82 &313283239
 AudioSource:

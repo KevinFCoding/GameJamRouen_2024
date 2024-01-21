@@ -8,8 +8,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] GameManager _gameManager;
     public bool _isBretonDefend;
     [SerializeField] AudioSource _source;
+    [SerializeField] AudioSource _sourceSound;
     [SerializeField] List<AudioClip> _clips;
+    [SerializeField] AudioClip _bell;   
     [SerializeField] TimerGlobalManager _timerGlobalManager;
+    private bool isNotSonned;
     void Start()
     {
         ChangeMusic();
@@ -19,6 +22,12 @@ public class AudioManager : MonoBehaviour
     {
         if(_timerGlobalManager.seconds <= 10)
         {
+            if (!isNotSonned)
+            {
+                _sourceSound.PlayOneShot(_bell);
+                isNotSonned = true;
+
+            }
             _source.pitch = 1.16f;
         }
     }
