@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip _positionSwapSound;
     [SerializeField] List<AudioClip> _attackSound;
     [SerializeField] List<AudioClip> _defenseSound;
+    [SerializeField] ParticleSystem _ParticleSystem;
 
     private AudioSource _playerAudioSource;
 
@@ -153,7 +154,7 @@ public class Player : MonoBehaviour
                     Destroy(collider.gameObject);
                 int soundToPlay = Random.Range(0, _defenseSound.Count);
                 _playerAudioSource.PlayOneShot(_defenseSound[soundToPlay]);
-
+                _ParticleSystem.Emit(10);
                 //}
                 //collider.gameObject.GetComponent<Projectile>().Reduced();
             }
