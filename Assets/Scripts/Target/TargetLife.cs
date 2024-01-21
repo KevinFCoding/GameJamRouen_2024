@@ -15,7 +15,9 @@ public class TargetLife : MonoBehaviour
     [SerializeField] CameraShaking _cameraShaking;
     [SerializeField] List<GameObject> _spritesTarget;
 
-    
+
+    [SerializeField] AudioManager _audiomanager;
+    [SerializeField] List<AudioClip> _takeDamageSound;
 
     [SerializeField] Slider _lifeBarSlider;
 
@@ -70,6 +72,9 @@ public class TargetLife : MonoBehaviour
             _spritesTarget[1].SetActive(false);
         }
         _vignette.weight += damage / 100;
+
+        int soundToPlay = Random.Range(0, _takeDamageSound.Count);
+        _audiomanager.GetComponent<AudioSource>().PlayOneShot(_takeDamageSound[soundToPlay]); ;
     }
 
     public void UpdateSliderLifeBar()

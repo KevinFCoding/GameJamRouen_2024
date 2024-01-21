@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public bool gameIsFinished;
     [SerializeField] Animator _animRiver;
 
+    [SerializeField] AudioManager _audiomanager;
+    [SerializeField] AudioClip _swap;
+
     void Start()
     {
         PrepareStartGame();
@@ -62,6 +65,7 @@ public class GameManager : MonoBehaviour
             _river._currentState = _statusAttack;
         }
         _river.ChangeState();
+        _audiomanager.GetComponent<AudioSource>().PlayOneShot(_swap);
     }
 
     public void SetUpTimer()

@@ -6091,6 +6091,8 @@ MonoBehaviour:
   _statusAttack: 0
   gameIsFinished: 0
   _animRiver: {fileID: 1389364886}
+  _audiomanager: {fileID: 313283238}
+  _swap: {fileID: 8300000, guid: 33e0e1475035a604cb52ce4e461e0987, type: 3}
 --- !u!4 &782325848
 Transform:
   m_ObjectHideFlags: 0
@@ -6658,6 +6660,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 782325847}
     - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: _audiomanager
+      value: 
+      objectReference: {fileID: 313283238}
+    - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: _pauseManager
       value: 
       objectReference: {fileID: 285836260}
@@ -6665,6 +6671,30 @@ PrefabInstance:
       propertyPath: _cameraShaking
       value: 
       objectReference: {fileID: 1498422010}
+    - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: _takeDamageSound.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: _takeDamageSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cfa7f9321dcd24d4c8dbf701b544a4c2, type: 3}
+    - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: _takeDamageSound.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a912bdeb1a7f624eade54ca8b8bcb2c, type: 3}
+    - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: _takeDamageSound.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6aacf51119d9f9741b276a641f9f6720, type: 3}
+    - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: _takeDamageSound.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 11ae82d987fda294eaa6b5adf827c622, type: 3}
+    - target: {fileID: 492230928075822120, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
+      propertyPath: _takeDamageSound.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6cef3cf54170f8a44a377ea4dea1847d, type: 3}
     - target: {fileID: 1412247006044420953, guid: 6b8b7d0a9e289fa40b051c18eb2eaaee, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

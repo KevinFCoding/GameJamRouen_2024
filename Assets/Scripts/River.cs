@@ -11,12 +11,7 @@ public class River : MonoBehaviour
     [SerializeField] SpriteRenderer _spriteRiver;
     void Start()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        _spriteRiver.flipX = false;
     }
 
     public void ChangeState()
@@ -24,12 +19,12 @@ public class River : MonoBehaviour
         if(_currentState == false)
         {
             // Normandie Attaque / Bretagne Défend
-            _spriteRiver.flipX = true; 
+            _spriteRiver.flipX = false; 
         }
         else
         {
             // Bretagne Attaque / Normandie Défend
-            _spriteRiver.flipX = false;
+            _spriteRiver.flipX = true;
 
         }
     }
