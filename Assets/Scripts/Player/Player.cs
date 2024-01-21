@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] Projectile _projectile;
     //[SerializeField] List<GameObject> _MiniatureImage;
 
+    [SerializeField] float _defenseSpeed;
     [SerializeField] float _speed;
     [SerializeField] float _distanceRadius;
 
@@ -62,7 +63,7 @@ public class Player : MonoBehaviour
         if (_isNormand && gm.getStatusAttack())
         {
             _distanceRadius = 15;
-            _speed = 7;
+            _speed = 4.5f;
             _isAttacking = true;
         };
         // Breton Def
@@ -76,7 +77,7 @@ public class Player : MonoBehaviour
         if (!_isNormand && !gm.getStatusAttack())
         {
             _distanceRadius = 15;
-            _speed = 7;
+            _speed = 4.5f;
             _isAttacking = true;
         };
          // Avoid direct shoot after switch
