@@ -25,9 +25,17 @@ public class Player : MonoBehaviour
 
     private int assaultTableCurrentIndex = 0;
 
+    [SerializeField] AudioClip _positionSwapSound;
+    [SerializeField] List<AudioClip> _attackSound;
+    [SerializeField] List<AudioClip> _defenseSound;
+
+    private AudioSource _playerAudioSource;
+
+
     private void Start()
     {
         transform.position = _target.transform.position;
+        _playerAudioSource = GetComponent<AudioSource>();
         changePlayerAttacking();
         _arrowMuzzle = gameObject.GetComponentInChildren<ArrowMuzzle>().transform;
         nextTroupes();
@@ -47,30 +55,32 @@ public class Player : MonoBehaviour
         if(_isNormand && !gm.getStatusAttack()) // If false the Normand have montsaitnniche,
         {
             _distanceRadius = 5;
-            _speed = 5;
+            _speed = 4;
             _isAttacking = false; 
         };
         // Normand Attack
         if (_isNormand && gm.getStatusAttack())
         {
             _distanceRadius = 15;
-            _speed = 10;
+            _speed = 7;
             _isAttacking = true;
         };
         // Breton Def
         if (!_isNormand && gm.getStatusAttack())
         {
             _distanceRadius = 5;
-            _speed = 5;
+            _speed = 4;
             _isAttacking = false;
         };
         // Breton Attack
         if (!_isNormand && !gm.getStatusAttack())
         {
             _distanceRadius = 15;
-            _speed = 10;
+            _speed = 7;
             _isAttacking = true;
         };
+         // Avoid direct shoot after switch
+        _playerAudioSource.PlayOneShot(_positionSwapSound);
     } 
 
     public bool isPlayerAttacking()
@@ -84,6 +94,9 @@ public class Player : MonoBehaviour
             Projectile shotFired = Instantiate(_projectile, _arrowMuzzle.position, _arrowMuzzle.rotation);
             Destroy(shotFired, 3f);
             shootTimer = 0;
+
+            int soundToPlay = Random.Range(0, _attackSound.Count);
+            _playerAudioSource.PlayOneShot(_attackSound[soundToPlay - 1]);
         }
     }
 
@@ -138,6 +151,9 @@ public class Player : MonoBehaviour
                 //if (IsTheDefenserRight(collider.gameObject.GetComponent<Projectile>().getProjectileStyle()))
                 //{
                     Destroy(collider.gameObject);
+                int soundToPlay = Random.Range(0, _defenseSound.Count);
+                _playerAudioSource.PlayOneShot(_defenseSound[soundToPlay - 1]);
+
                 //}
                 //collider.gameObject.GetComponent<Projectile>().Reduced();
             }
