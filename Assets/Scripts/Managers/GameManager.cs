@@ -57,12 +57,16 @@ public class GameManager : MonoBehaviour
         {
             _statusAttack = false;
             _river._currentState = _statusAttack;
+            _audiomanager._isBretonDefend = false;
+            _audiomanager.ChangeMusic();
 
         }
         else
         {
             _statusAttack = true;
             _river._currentState = _statusAttack;
+            _audiomanager._isBretonDefend = true;
+            _audiomanager.ChangeMusic();
         }
         _river.ChangeState();
         _audiomanager.GetComponent<AudioSource>().PlayOneShot(_swap);
