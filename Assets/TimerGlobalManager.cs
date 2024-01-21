@@ -17,6 +17,12 @@ public class TimerGlobalManager : MonoBehaviour
         {
             IncreaseTimer();
         }
+
+        if(seconds <= 0)
+        {
+            seconds = 0;
+            scoreText.text = "00:00";
+        }
     }
 
     public void StartTimer()
