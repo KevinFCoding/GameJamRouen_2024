@@ -13,6 +13,13 @@ public class GameOver : MonoBehaviour
     [SerializeField] Image _finalStateMSMToDisplay;
     [SerializeField] List<GameObject> _whoWon;
 
+    private void Start()
+    {
+        foreach (GameObject go in _whoWon)
+        {
+            go.SetActive(false);
+        }
+    }
     public void ShowScoreBoard()
     {
         _gameOverCanvas.SetActive(true);
