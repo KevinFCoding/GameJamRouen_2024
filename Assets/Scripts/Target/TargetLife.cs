@@ -67,11 +67,14 @@ public class TargetLife : MonoBehaviour
         if (currentHP < 6) {
             _spritesTarget[1].SetActive(true);
             _spritesTarget[0].SetActive(false);
+
+            _gameManager.setMsMFinalState(1);
         }
         if (currentHP < 3)
         {
             _spritesTarget[2].SetActive(true);
             _spritesTarget[1].SetActive(false);
+            _gameManager.setMsMFinalState(2);
         }
         _vignette.weight += damage / 100;
 
