@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
             //_animRiver.enabled = false;
         }
 
-        if (_target.currentHP == 0)
+        if (_target.currentHP <= 0)
         {
             GameOver();
         }
