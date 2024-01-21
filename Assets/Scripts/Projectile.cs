@@ -24,6 +24,7 @@ public class Projectile : MonoBehaviour
     {
         _isReduced = true;
     }
+
     public bool getIsReduced()
     {
         return _isReduced;

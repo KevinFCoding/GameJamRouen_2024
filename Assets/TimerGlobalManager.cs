@@ -5,6 +5,7 @@ public class TimerGlobalManager : MonoBehaviour
 {
 
     [SerializeField] bool isGameFinished;
+    [SerializeField] float setupTime;
     public float seconds;
     [SerializeField] bool isRunning = false;
     public TMP_Text scoreText;
@@ -20,7 +21,7 @@ public class TimerGlobalManager : MonoBehaviour
 
     public void StartTimer()
     {
-        seconds = 180;
+        seconds = setupTime;
         isRunning = true;
     }
 

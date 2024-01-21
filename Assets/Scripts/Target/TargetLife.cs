@@ -28,7 +28,10 @@ public class TargetLife : MonoBehaviour
             {
                 TakeDamage(1);
             }
-            TakeDamage(2);
+            else
+            {
+                TakeDamage(2);
+            }
             Destroy(collider.gameObject);
         }
     }

@@ -130,7 +130,6 @@ public class Player : MonoBehaviour
     // Collision with bullet from attack
     private void OnTriggerEnter(Collider collider)
     {
-        print("OnCollisionEnter "+ collider);
         if(!isPlayerAttacking())
         {
             if (collider.gameObject.GetComponent<Projectile>())
