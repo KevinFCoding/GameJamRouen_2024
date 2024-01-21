@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] GameObject _bow;
     [SerializeField] GameObject _shield;
+    [SerializeField] GameObject _arrow;
 
     private AudioSource _playerAudioSource;
 
@@ -51,6 +52,9 @@ public class Player : MonoBehaviour
         transform.LookAt(_target);
         changePlayerAttacking();
         shootTimer += Time.deltaTime;
+        if (shootTimer > 2 && _arrow.active == false && _isAttacking) {
+            _arrow.SetActive(true);
+        }
     }
 
     private void changePlayerAttacking()
@@ -119,6 +123,7 @@ public class Player : MonoBehaviour
             Destroy(shotFired, 3f);
             shootTimer = 0;
 
+            _arrow.SetActive(false);
             int soundToPlay = Random.Range(0, _attackSound.Count);
             _playerAudioSource.PlayOneShot(_attackSound[soundToPlay]);
         }
