@@ -5,16 +5,27 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float _speed;
+    [SerializeField] string _projectileStyle;
     public GameObject projectile;
-    public float arrowDirection = 1;
+
+    private bool _isReduced = false;
 
     void Update()
     {
-        transform.position += Time.deltaTime * _speed * transform.forward * arrowDirection;
+        transform.position += Time.deltaTime * _speed * transform.forward;
     }
 
-    public void setArrowSens()
+    public string getProjectileStyle()
     {
-        arrowDirection = arrowDirection * - 1;
+        return _projectileStyle;
+    }
+
+    public void Reduced()
+    {
+        _isReduced = true;
+    }
+    public bool getIsReduced()
+    {
+        return _isReduced;
     }
 }

@@ -20,9 +20,9 @@ public class PlayerControllerBreton : MonoBehaviour
         }
 
         // Movement
-        float x = player.gm.transform.position.x + Mathf.Cos(_angle) * player.getRadius();
-        float y = player.gm.transform.position.y;
-        float z = player.gm.transform.position.z + Mathf.Sin(_angle) * player.getRadius();
+        float x = player.getTargetPosition().x + Mathf.Cos(_angle) * player.getRadius();
+        float y = player.getTargetPosition().y;
+        float z = player.getTargetPosition().z + Mathf.Sin(_angle) * player.getRadius();
 
         transform.position = new Vector3(x, y, z);
 
@@ -33,6 +33,10 @@ public class PlayerControllerBreton : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             _angle += -player.getSpeed() * Time.deltaTime;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            player.nextTroupes();
         }
     }
 }
