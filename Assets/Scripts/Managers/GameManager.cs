@@ -14,8 +14,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] AudioManager _audiomanager;
     [SerializeField] AudioClip _swap;
+    [SerializeField] AudioClip _rain;
 
     private bool isMontSaintMichelDead = false;
+    private bool isRainFalling = false;
 
     private int MsMState = 0;
 
@@ -51,6 +53,11 @@ public class GameManager : MonoBehaviour
         if(_timer.seconds <= 3)
         {
             _animRiver.enabled = true;
+            if (!isRainFalling)
+            {
+                _audiomanager.GetComponent<AudioSource>().PlayOneShot(_rain);
+                isRainFalling = true;
+            }
         }
 
         if (_timerGlobal.seconds <= 0) {
@@ -60,6 +67,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchAttack()
     {
+        isRainFalling = false;;
         if (_statusAttack == true) // if true then the bretagne is attacking
         {
             _statusAttack = false;

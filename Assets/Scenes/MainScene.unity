@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8988783283779208848, guid: 89fecfdf635eb55449ea8bf8c59133d6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8988634796733503389, guid: 89fecfdf635eb55449ea8bf8c59133d6, type: 3}
@@ -6148,6 +6148,7 @@ MonoBehaviour:
   _animRiver: {fileID: 1389364886}
   _audiomanager: {fileID: 313283238}
   _swap: {fileID: 8300000, guid: 33e0e1475035a604cb52ce4e461e0987, type: 3}
+  _rain: {fileID: 8300000, guid: ca734a5d9a40a4e4dbaa13b351f1b8fc, type: 3}
 --- !u!4 &782325848
 Transform:
   m_ObjectHideFlags: 0
