@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
     [SerializeField] List<AudioClip> _defenseSound;
     [SerializeField] ParticleSystem _ParticleSystem;
 
+    [SerializeField] GameObject _bow;
+    [SerializeField] GameObject _shield;
+
     private AudioSource _playerAudioSource;
 
 
@@ -52,6 +55,26 @@ public class Player : MonoBehaviour
 
     private void changePlayerAttacking()
     {
+        if(_isAttacking)
+        {
+            if(!_bow.active)
+            {
+                _bow.SetActive(true);
+            }
+            if (_shield.active)
+            {
+                _shield.SetActive(false);
+            }
+        } else {
+            if (_bow.active)
+            {
+                _bow.SetActive(false);
+            }
+            if (!_shield.active)
+            {
+                _shield.SetActive(true);
+            }
+        }
 
         // Normand Defend
         if(_isNormand && !gm.getStatusAttack()) // If false the Normand have montsaitnniche,
