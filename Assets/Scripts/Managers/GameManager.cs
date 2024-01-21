@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -32,9 +30,7 @@ public class GameManager : MonoBehaviour
         {
             SwitchAttack();
             _timer.isFinishTimer = false;
-            _animRiver.enabled = false;
-
-
+            //_animRiver.enabled = false;
         }
 
         if (_target.currentHP == 0)
@@ -44,7 +40,11 @@ public class GameManager : MonoBehaviour
 
         if(_timer.seconds <= 3)
         {
-            _animRiver.enabled = true;
+            //_animRiver.enabled = true;
+        }
+
+        if (_timerGlobal.seconds <= 0) {
+            GameOver();
         }
     }
 

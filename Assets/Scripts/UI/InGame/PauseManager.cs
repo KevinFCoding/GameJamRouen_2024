@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,10 +6,6 @@ public class PauseManager : MonoBehaviour
 
     [SerializeField] GameObject _pauseCanvas;
     public bool gameIsPaused;
-    void Start()
-    {
-
-    }
 
     void Update()
     {
